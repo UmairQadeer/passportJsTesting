@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CarTrawler - V5 Booking Engine</title>
+  </head>
+  <body>
+    <div ct-app><noscript>YOUR BROWSER DOES NOT SUPPORT JAVASCRIPT</noscript></div>
+    <script>
+        // Booking Engine Settings.
+        var CT = {
+        ABE: {
+            Settings: {
+              clientID: '594441'
+            }
+          }
+        };
+
+        // Booking Engine Loader.
+        (function() {
+            CT.ABE.Settings.version = '5.0';
+            var cts = document.createElement('script'); cts.type = 'text/javascript'; cts.async = true;
+            console.log(cts);
+            cts.src = '//ajaxgeo.cartrawler.com/abe' + CT.ABE.Settings.version + '/ct_loader.js?' + new Date().getTime();
+            console.log(cts.src);
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cts, s);
+        })();
+    </script>
+  </body>
+</html>
